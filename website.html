@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="img/cake!.png">
+    <title> Happy Bday !! </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="styles.css">
+</head>
+</body>
+    <div class="center">
+        <div id='captcha' class="grey flex">
+            <div id="captcha-container">
+                <img src="img/loading.gif" id='loading' class='hidden'>
+                <button id='check' class="grey click" onclick="popup()"></button>
+                <div id="captcha-popup" class="hidden shadow">
+                    <div id="captcha-top" class="flex">
+                        <input id="textbox" placeholder="Type the text" dirname="textbox-input.dir" class="font1" oninput="button()">
+                        <label id="textbox-label" class="font1 hidden">Enter the code shown below</label>
+                        <img id="captcha-image">
+                    </div>
+                    <div id="captcha-bottom" class="flex">
+                        <img src="img/icons.png" id="icons" usemap="#icons-map">
+                        <map name="icons-map" class="click">
+                            <area shape="rect" coords="0, 0, 15, 21" onclick="captcha()">
+                            <area shape="rect" coords="66, 0, 51, 21" onclick="tts()">
+                            <area shape="rect" coords="132, 0, 85, 21" onclick="info()">
+                        </map>
+                        <button id="verify" class="font1" onclick="verify()">Verify</button>
+                    </div>
+                    <div class="font2">
+                        <div id="love1" class="hidden">
+                            <span id="dylm1" class="dylm center">Do you love Abeer?</span>
+                            <div class="buttons">
+                                <button id="yes1" class="yes click" onclick="yes1()">YES</button>
+                                <button id="no1" class="no click" onclick="no1()">NO</button>
+                            </div>
+                        </div>
+                        <div id="love2" class="hidden">
+                            <span id="dylm2" class="dylm center">Do you <i>really</i> love Abeer?</span>
+                            <div class="buttons" onclick="yes()">
+                                <button id="yes2" class="yes click" onmouseover="yes2()">YES</button>
+                                <button id="no2" class="no click" onmouseover="no2()">NO</button>
+                            </div>
+                        </div>
+                        <div id="love3" class="hidden">
+                            <span id="dylm3" class="dylm center">Do you <i><b>really</b></i> love Abeer?</span>
+                            <div class="buttons">
+                                <button id="yes3" class="yes click" onclick="yes3()">YES</button>
+                                <button id="no3" class="no click">NO</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <span id="whoami" class="font1">I am Abdullah</span>
+            <img src="img/logo.png" id="logo">
+        </div>
+
+        <div id="puzzle-container" class="flex font2 hidden">
+            <span class="title"><b>Fix My Face Pls :(</b></span>
+            <span id="tiny">there is a very rare chance the puzzle is unsolvable (or maybe im just bad), if so u can press the button, maybe it'll work then... abeer is not master coder yet forgive me pls</span>
+            <button id="restart" onclick="restart()" class="click">I can't solve this !!</button>
+            <div id="board" class="flex"></div>
+        </div>
+
+        <div id="cake-container" class="flex font2 hidden">
+            <span class="title"><b>ADD THE CANDLES!!</b></span>
+            <span id="age">"ARE YOU...?"</span>
+            <span id="wish" class="hidden">u wish, old man</span>
+            <button id="stop" class="font1 click" onclick="stop()">"STOP!!"</button>
+            <img src="img/cake.png" id="cake" usemap="#cake-map">
+            <map name="cake-map" class="click" id="map" onclick="candle(event)">
+                <area shape="poly" coords="330,5,460,33,525,54,564,101,558,151,407,150,310,152,168,148,30,143,36,89,78,52,137,26">
+            </map>
+        </div>
+        <div id="paragraph" class="flex font3 hidden">
+            <p class="finale">You have no idea how much of a positive impact you have in my life. Every day I wake up insanely excited for the day that is to come, knowing that I'll be enjoying every single second of it because I will be with you, the most perfect person I know. You are the most compassionate, determined, handsome, intelligent, passionate, thoughtful, humble, patient, and loyal person I know, and these aren't even close to all the words I can think of. Never in my life did I think I could ever be completely mesmerized with a person, but here I am. I love your structured way of speaking, the way you run your hands through your soft curly hair, the way you constantly change your position while sitting, the way you look so focused when you're doing your nerd work, the way your beautiful brown eyes light up whenever you're really excited about something, the way you smile whenever you see me, just thinking of your smile makes me so happy. I'm so lucky I get to call you mine, to have you all for myself, whenever I want. I love knowing that I can always come to you in need, and you will always be there with open arms ready to listen to whatever it is Abeer needs, and will comfort me as much as possible. I know that sometimes I act sad and wah wah about small things, but you are so good at making me feel better instantly, it's like I was never sad in the first place. You are so good at knowing what to say and how to say it, I am always so impressed every time you open your mouth. Abdullah, I can't wait for us to get engaged and then married, for me to live with you and raise our family together. You are my motivation to do well. I have learned so much from you, you have given me so much advice and I try my best every day to use it and change myself for the better. You have helped me grow into a better person, and I hope to continue to grow as much as possible to be the most perfect person for you. I love you so much Abdullah, I miss you so much right now, I can't wait to spend your birthday with you. Have fun being 19!! I hope you love the gifts! :D</p>
+            <p class="finale" id="second">- Your sweet potato, Abeer <33</p>
+        </div>
+        <div id="card" class="font3 hidden">
+            <div id="outside" class="click">
+                <div id="front">
+                    <p>HAPPY BIRTHDAY ABDULLAH!!</p>
+                    <img src="img/hugs.gif">
+                </div>
+                <div id="back"></div>
+            </div>
+            <div id="inside">
+                <p>I love you so much jaanu!!</p>
+                <img src="img/us.png" id="us">
+                <button id="readmore" class="click" onclick="finale()">READ MORE</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+</body>
+</html>
